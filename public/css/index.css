@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+.h-100vh {
+  height: 100vh;
+}
+.bg-main {
+  background-color: rgb(239 249 245);
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.text-main {
+  color: #032428;
+}
+
+.route-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px;
+  background-color: #032428;
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  color: #ffffff;
+}
+.route-card-icon i {
+  font-size: 48px;
+}
