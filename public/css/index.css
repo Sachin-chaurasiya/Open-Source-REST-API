@@ -33,3 +33,8 @@
 .route-card-icon i {
   font-size: 48px;
 }
+
+.brand-image {
+  display: block;
+  margin: auto;
+}
