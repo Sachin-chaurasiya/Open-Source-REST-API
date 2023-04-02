@@ -1,5 +1,4 @@
 import jsonServer from 'json-server';
-import cors from 'cors';
 import helmet from 'helmet';
 import { rateLimiter } from './middleware/ratelimit';
 import getRoutes from './routes';
@@ -11,8 +10,13 @@ const router = jsonServer.router(getRoutes());
 // Serve static files from the public directory
 const publicPath = path.join(process.cwd(), 'public');
 
-server.use(cors());
-server.use(helmet());
+server.use(
+  helmet({
+    contentSecurityPolicy: {
+      directives: { scriptSrc: ["'self'", 'cdn.jsdelivr.net'] },
+    },
+  })
+);
 server.use(jsonServer.defaults({ static: publicPath }));
 server.use(jsonServer.bodyParser);
 server.use(rateLimiter);

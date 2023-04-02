@@ -5,6 +5,11 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 .h-100vh {
   height: 100vh;
 }
@@ -29,6 +34,7 @@
   border-radius: 0.5rem;
   padding: 1.25rem;
   color: #ffffff;
+  cursor: pointer;
 }
 .route-card-icon i {
   font-size: 48px;
