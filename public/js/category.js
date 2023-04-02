@@ -20,7 +20,7 @@ const fetchAndRenderRoutesCategory = async () => {
         return `
         <div class="col-md-4 col-12">
           <a class="router-card-anchor" href="#${name}-example">
-                  <div class="route-card" id="routes-${name}">
+                  <div class="route-card shadow" id="routes-${name}">
                       <div class="route-card-content">
                         <h3>${name}</h3>
                         <p>
