@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Users",
+    "description": "Empower your app with user data from Open Source REST API.",
+    "icon": "fa-regular fa-user"
+  },
+  {
+    "name": "Posts",
+    "description": "Effortlessly populate your app with posts from our API.",
+    "icon": "fa-regular fa-newspaper"
+  },
+  {
+    "name": "Comments",
+    "description": "Simplify your app's commenting system with our API.",
+    "icon": "fa-regular fa-comment"
+  },
+  {
+    "name": "Reviews",
+    "description": "Enhance your app's functionality with review data from our API.",
+    "icon": "fa-regular fa-star"
+  },
+  {
+    "name": "Events",
+    "description": "Streamline your app's event management with our API.",
+    "icon": "fa-regular fa-calendar-days"
+  },
+  {
+    "name": "Products",
+    "description": "Easily integrate product data into your app with our API.",
+    "icon": "fa-brands fa-product-hunt"
+  }
+]
