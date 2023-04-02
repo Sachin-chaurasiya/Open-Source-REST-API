@@ -17,19 +17,23 @@ const fetchAndRenderRoutesCategory = async () => {
 
     routesContainer.innerHTML = routes
       .map(({ name, description, icon }) => {
-        return `<div class="col-md-4 col-12">
-                <div class="route-card" id="routes-${name}">
-                    <div class="route-card-content">
-                      <h3>${name}</h3>
-                      <p>
-                        ${description}
-                      </p>
-                    </div>
-                    <div class="route-card-icon">
-                      <i class="${icon}"></i>
-                    </div>
-                </div>
-              </div>`;
+        return `
+        <div class="col-md-4 col-12">
+          <a class="router-card-anchor" href="#${name}-example">
+                  <div class="route-card" id="routes-${name}">
+                      <div class="route-card-content">
+                        <h3>${name}</h3>
+                        <p>
+                          ${description}
+                        </p>
+                      </div>
+                      <div class="route-card-icon">
+                        <i class="${icon}"></i>
+                      </div>
+                  </div>
+          </a>
+        </div>
+        `;
       })
       .join('');
   } catch (error) {

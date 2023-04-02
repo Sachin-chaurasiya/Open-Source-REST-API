@@ -71,12 +71,20 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <!-- PrimsJS CSS and Script -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-okaidia.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/index.css" />
   </head>
   <body class="bg-main">
     <main class="h-100vh text-main">
-      <section class="p-5" id="showcase">
+      <section class="p-5 pb-0" id="showcase">
         <img
           class="brand-image"
           src="./images/rest-api-96.svg"
@@ -88,9 +96,101 @@
           Source REST API.
         </p>
       </section>
-      <section class="p-5" id="routes">
+      <section class="p-5 pb-0" id="routes">
         <div class="row gy-5" id="routes-row">
           <!-- Category route will be added here -->
+        </div>
+      </section>
+      <section class="p-5 pb-0" id="Users-example">
+        <h3 class="mb-0">Users</h3>
+        <p class="mb-0">
+          Empower your app with user data from Open Source REST API.
+        </p>
+        <div class="row gx-5">
+          <div class="col-md-6 col-12">
+            <pre class="language-javascript">
+              <code>
+const fetchUsers = async () => {
+  try {
+    const userRes = await fetch(
+      "https://oss-rest-api.sachinchaurasiya.dev/users"
+    );
+
+    const users = await userRes.json();
+
+    console.log(users);
+  } catch (error) {
+    // handle error
+  }
+};
+              </code>
+            </pre>
+          </div>
+          <div class="col-md-6 col-12">
+            <pre class="language-javascript">
+              <code>              
+[
+  {
+    id: "c5a9a6cb-e5d9-47dd-bf8f-681dbb48011d",
+    avatar:
+      "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1101.jpg",
+    birthday: "2002-04-15T12:54:54.956Z",
+    email: "Dennis.Streich@gmail.com",
+    firstName: "Dennis",
+    lastName: "Streich",
+    sex: "male",
+  },
+  ...
+];
+              </code>
+            </pre>
+          </div>
+        </div>
+      </section>
+      <section class="p-5 pb-0" id="Posts-example">
+        <h3 class="mb-0">Posts</h3>
+        <p class="mb-0">
+          Effortlessly populate your app with posts from our API.
+        </p>
+        <div class="row gx-5">
+          <div class="col-md-6 col-12">
+            <pre class="language-javascript">
+              <code>
+const fetchPosts = async () => {
+  try {
+    const postRes = await fetch(
+      "https://oss-rest-api.sachinchaurasiya.dev/posts"
+    );
+
+    const posts = await postRes.json();
+
+    console.log(posts);
+  } catch (error) {
+    // handle error
+  }
+};
+              </code>
+            </pre>
+          </div>
+          <div class="col-md-6 col-12">
+            <pre class="language-javascript">
+              <code>              
+[
+  {
+    "id": "075a5a02-e7b2-422a-8295-6640379b8f25",
+    "title": "nulla tenetur assumenda est similique",
+    "author": "Miss Valerie Gorczany",
+    "date": "2023-04-01T18:41:36.084Z",
+    "content": "Tempore ut consequuntur voluptatum eligendi. Laborum rerum asperiores vitae soluta voluptas dolore architecto pariatur dolores. Enim at ratione ipsum molestias.
+    \nAmet itaque voluptas repudiandae velit dicta a at. Quibusdam recusandae magni harum ex. Quibusdam maiores porro ipsum odit tempore quisquam repellat nihil.
+    \nLibero saepe possimus inventore beatae voluptatibus iure veniam. Asperiores doloremque deleniti veniam officiis nesciunt. 
+    Id iusto ea itaque ratione consequuntur. Quis sed accusantium distinctio."
+  },
+  ...
+];
+              </code>
+            </pre>
+          </div>
         </div>
       </section>
     </main>
@@ -99,6 +199,9 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
+    <script>
+      Prism.highlightAll();
+    </script>
     <script src="./js/category.js"></script>
   </body>
 </html>

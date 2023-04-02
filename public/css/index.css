@@ -24,6 +24,10 @@ html {
 .text-main {
   color: #032428;
 }
+.router-card-anchor {
+  text-decoration: none;
+  color: #ffffff;
+}
 
 .route-card {
   display: flex;
@@ -43,4 +47,19 @@ html {
 .brand-image {
   display: block;
   margin: auto;
+}
+
+/* code block style */
+
+pre {
+  border-radius: 0.5rem !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+  padding: 1.5rem !important;
+}
+
+pre[class*='language-'] {
+  background-color: #032428;
+  border-radius: 0.5rem;
+  font-family: 'Roboto', sans-serif;
 }
