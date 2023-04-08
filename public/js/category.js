@@ -16,10 +16,10 @@ const fetchAndRenderRoutesCategory = async () => {
     const routes = (await routesRes.json()) ?? [];
 
     routesContainer.innerHTML = routes
-      .map(({ name, description, icon }) => {
+      .map(({ name='', description, icon }) => {
         return `
         <div class="col-md-4 col-12">
-          <a class="router-card-anchor" href="#${name}-example">
+          <a class="router-card-anchor" href="/${name.toLowerCase()}">
                   <div class="route-card shadow" id="routes-${name}">
                       <div class="route-card-content">
                         <h3>${name}</h3>
