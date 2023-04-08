@@ -49,6 +49,10 @@ html {
   margin: auto;
 }
 
+.py-4{
+  padding: 16px 0px;
+}
+
 /* code block style */
 
 pre {
@@ -62,3 +66,4 @@ pre[class*='language-'] {
   border-radius: 0.5rem;
   font-family: 'Roboto', sans-serif;
 }
+
